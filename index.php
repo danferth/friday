@@ -3,8 +3,10 @@
 // $url=$_SERVER['REQUEST_URI'];
 // header("Refresh: 1; URL=$url"); 
 
+
 date_default_timezone_set('America/Los_Angeles');
-$target = mktime(17, 30, 0, 3, 29, 2013);
+$target = strtotime('next Friday 17:30');
+//$target = mktime(17, 30, 0, 3, 29, 2013);
 $time = time();
 $difference = (int)($target-$time);
 
@@ -30,6 +32,7 @@ $test = date("g:i:s",$time);
 	<meta charset="UTF-8">
 	<title>.::|FRIDAY|::.</title>
 	<link href='http://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -42,12 +45,10 @@ $test = date("g:i:s",$time);
 				<span class="digit second"><?php echo $seconds; ?><span>Seconds</span></span>
 	
 			</div>
-			<p class="tag">Firday will come please be patient&nbsp; &nbsp;<span>:o)</span></p>
+			<p class="tag">Friday <strong>5:30</strong> will come please be patient&nbsp; &nbsp;<span>:o)</span></p>
 		</div>
 		
 	</div>
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="assets/js/site.js"></script>
 	<script src="https://danferth-host.googlecode.com/files/prefix.js"></script>
 </body>
