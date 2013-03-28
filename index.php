@@ -1,12 +1,22 @@
 <?php
-
+date_default_timezone_set('America/Los_Angeles');
 $target = mktime(17, 30, 0, 3, 29, 2013);
-$now = time();
-$difference = ($target-$now);
-$days = (int) ($difference/86400);
-$hours = (int) (($difference/3600)-($days*24));
-$minutes = (int) (($difference/60)-($hours*60+$days*1440));
+$time = time();
+$difference = (int)($target-$time);
 
+$days = (int)($difference/86400);
+$day = round($days, 0, PHP_ROUND_HALF_DOWN);
+
+$hours = (int)(($difference/3600)-($day*24));
+$hour = round($hours, 0, PHP_ROUND_HALF_DOWN);
+
+$minutes = (int)(($difference/60)-(($hour*60)+($day*1440)));
+$minute = round($minutes, 0, PHP_ROUND_HALF_DOWN);
+
+$seconds = (int)(($difference/1)-(($hours*3600)+($days*86400)+($minutes*60)));
+$second = round($seconds, 0, PHP_ROUND_HALF_DOWN);
+
+$test = date("g:i:s",$time);
 
 ?>
 
@@ -20,15 +30,15 @@ $minutes = (int) (($difference/60)-($hours*60+$days*1440));
 </head>
 <body>
 	<div class="taco">
-		<div class="countdown">
-		<?php echo $difference; ?>
-			<?php #echo $days . ":" . $hours . ":" . $minutes; ?>
+		<div class="timer">
+		<div class="countdown"><?php echo $day.":".$hours.":".$minutes.":".$seconds; ?></div>
 		<p class="tag">Firday will come please be patient<span>:)</span></p>
 		</div>
 		
 	</div>
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="assets/js/site.js"></script>
 	<script src="https://danferth-host.googlecode.com/files/prefix.js"></script>
 </body>
 </html>
