@@ -1,4 +1,8 @@
 <?php
+
+// $url=$_SERVER['REQUEST_URI'];
+// header("Refresh: 1; URL=$url"); 
+
 date_default_timezone_set('America/Los_Angeles');
 $target = mktime(17, 30, 0, 3, 29, 2013);
 $time = time();
@@ -31,8 +35,14 @@ $test = date("g:i:s",$time);
 <body>
 	<div class="taco">
 		<div class="timer">
-		<div class="countdown"><?php echo $day.":".$hours.":".$minutes.":".$seconds; ?></div>
-		<p class="tag">Firday will come please be patient<span>:)</span></p>
+			<div class="countdown">
+				<span class="digit day"><?php echo $day; ?><span>Days</span></span>
+				<span class="digit hour"><?php echo $hours; ?><span>Hours</span></span>
+				<span class="digit minute"><?php echo $minutes; ?><span>Minutes</span></span>
+				<span class="digit second"><?php echo $seconds; ?><span>Seconds</span></span>
+	
+			</div>
+			<p class="tag">Firday will come please be patient&nbsp; &nbsp;<span>:o)</span></p>
 		</div>
 		
 	</div>
