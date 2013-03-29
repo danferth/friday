@@ -6,7 +6,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="assets/css/style.css">
-	<?php include_once("../analyticstracking.php") ?>
+	<?php #include_once("../analyticstracking.php") ?>
 </head>
 <body>
 	<div class="taco">
@@ -17,6 +17,8 @@
 			</div>
 			<p class="tag">Friday <strong>5:30</strong> will come please be patient&nbsp; &nbsp;<span>:o)</span></p>
 		</div>
+		
+		
 		
 	</div>
 	<script src="assets/js/site.js"></script>
