@@ -16,7 +16,7 @@
 				
 	
 			</div>
-			<p class="tag">Friday <strong>5:30</strong> will come, please be patient&nbsp; &nbsp;<span>:o)</span></p>
+			<p class="tag">Friday!!! <strong>5:30</strong> will come, please be patient&nbsp; &nbsp;<span>:o)</span></p>
 		</div>
 		
 		
