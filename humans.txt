@@ -16,6 +16,6 @@
     HTML
     CSS - from SCSS
     jQuery
-    PHP
+    PHP & boilerplate-php (https://github.com/danferth/bp-php)
     Grunt
 
