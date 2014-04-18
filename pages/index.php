@@ -1,10 +1,15 @@
 <?php 
 
-function test($arg){
-	date_default_timezone_set($arg);
+class test{
+
+	function __construct($arg){
+		date_default_timezone_set($arg);
+	}
 }
 
-test('America/Goose_Bay');
+
+
+$today = new test('America/Chihuahua');
 
 
 phpinfo();
