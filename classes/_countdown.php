@@ -25,7 +25,7 @@ class countdown_timer{
 
 	function __construct($timeZone, $deadTime, $deadDay){
 		//set time zone
-		date_default_timezone_set('$timeZone');
+		date_default_timezone_set($timeZone);
 		//set time
 		$this->time = time();
 		//check range between desired target & time

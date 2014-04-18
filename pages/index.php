@@ -1,5 +1,12 @@
 <?php 
-date_default_timezone_set('America/Los_Angeles');
+
+function test($arg){
+	date_default_timezone_set($arg);
+}
+
+test('America/Los_Angeles');
+
+
 phpinfo();
 
  ?>
