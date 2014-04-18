@@ -78,6 +78,9 @@ class countdown_timer{
 	function get_second(){
 		return $this->second;
 	}
+	function get_zone(){
+		return date_default_timezone_get();
+	}
 }
 
 ?>
