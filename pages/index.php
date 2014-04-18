@@ -4,7 +4,7 @@ function test($arg){
 	date_default_timezone_set($arg);
 }
 
-test('America/Los_Angeles');
+test('America/Goose_Bay');
 
 
 phpinfo();
