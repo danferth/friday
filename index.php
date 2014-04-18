@@ -6,7 +6,7 @@ $body->head();
 ?>
 
 <div class="taco">
-<h1 style="color:#fff;"><?php echo date(e); ?></h1>
+<h1 style="color:#fff;"><?php echo date_default_timezone_get(); ?></h1>
 
 ?>
 	<div class="timer">
