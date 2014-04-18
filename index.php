@@ -6,9 +6,6 @@ $body->head();
 ?>
 
 <div class="taco">
-<h1 style="color:#fff;"><?php echo date_default_timezone_get(); ?></h1>
-
-?>
 	<div class="timer">
 		<div class="countdown"></div>
 		<p class="tag">Friday <strong>5:30</strong> will come, please be patient&nbsp; &nbsp;<span>:o)</span></p>

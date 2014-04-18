@@ -6,7 +6,6 @@ $day = $countdown->get_day();
 $hour = $countdown->get_hour();
 $minute = $countdown->get_minute();
 $second = $countdown->get_second();
-$zone = $countdown->get_zone();
 ?>
 
 <!-- output time veriables -->
@@ -14,4 +13,3 @@ $zone = $countdown->get_zone();
 <span class="digit hour"><?php echo $hour; ?><span>Hours</span></span>
 <span class="digit minute"><?php echo $minute; ?><span>Minutes</span></span>
 <span class="digit second"><?php echo $second; ?><span>Seconds</span></span>
-<p style="color:#fff"><?php echo $zone; ?></p>
