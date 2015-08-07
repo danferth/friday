@@ -2,7 +2,7 @@ Friday Countdown Clock
 ======================
 People in the office always want to know, *when is it time for the weekend* so the **Fridy Countdown Clock** was created.
 
-Small PHP page that displays a countdown timer to fridays 5:30 PST
+Small PHP app that displays a countdown timer to fridays 5:30 PST
 
 **Things that need to be completed**
 
@@ -12,3 +12,4 @@ Small PHP page that displays a countdown timer to fridays 5:30 PST
 - [X] favicon
 - [X] convert over to PHP-bp
 - [X] add analytics
+- [ ] add gulp
