@@ -1,3 +1,5 @@
+var countdown = function(){
+  
 var now           = new Date(),
     now_day       = now.getDay(),
     now_month     = now.getMonth(),
@@ -12,7 +14,7 @@ var now           = new Date(),
     target_hour   = 17,
     target_minute = 30,
     target_second = 0;
-    
+
 switch(now_day){
   case 0:   target_date = now_date + 5;
     break;
@@ -29,55 +31,53 @@ switch(now_day){
   case 6:   target_date = now_date + 6;
     break;
 }
-var set_now     = new Date(now_year, now_month, now_date, now_hour, now_minute, now_second);
-var set_target  = new Date(target_year, target_month, target_date, target_hour, target_minute, target_second);
 
-var time_diff = set_target - set_now;
+var start_now     = new Date(now_year, now_month, now_date, now_hour, now_minute, now_second);
+var start_target  = new Date(target_year, target_month, target_date, target_hour, target_minute, target_second);
+
+var start = start_target - start_now;
 
 var diff_days     = 0,
     diff_hours    = 0,
     diff_minutes  = 0,
     diff_seconds  = 0;
 
-//find seconds
-if(time_diff % 1000 === 0){
-  diff_seconds = time_diff / 1000;
-}else{
-  var remainder = time_diff % 1000;
-  diff_seconds = (time_diff - remainder)/1000;
-}
-
-//pars function
-var find_time = function(time, count){
-  if(diff_seconds % count === 0){
-    time = diff_seconds / count;
+var toSeconds  = function(mills){
+  var rslt = 0;
+  if(mills % 1000 === 0){
+    rslt = mills / 1000;
   }else{
-    var  n = diff_seconds % count;
-    time = (diff_seconds - n) / count;
+    var n = mills % 1000;
+    rslt = (mills - n) / 1000;
   }
-  diff_seconds = n;
-  return time;
+  return rslt;
 };
 
-var days = find_time(diff_days, 86400);
-var hours = find_time(diff_hours, 3600);
-var minutes = find_time(diff_minutes, 60);
-var seconds = diff_seconds;
-
-console.log("days "+days+ " | hours "+hours+" | minutes "+minutes+" | seconds "+seconds);
-
-var countdown = function(sec){
-  var start_seconds = seconds;
-  find_time(days, 86400);
-  find_time(hours, 3600);
-  find_time(minutes, 60);
-  seconds = diff_seconds;
-
-  console.log("days "+days+ " | hours "+hours+" | minutes "+minutes+" | seconds "+seconds);
-
-  start_seconds = seconds -1;
+var find_time = function(sec, count){
+  
+  if(sec % count === 0){
+    var n = sec / count;
+  }else{
+    var  r = sec % count;
+    n = (sec - r) / count;
+  }
+  return n;
 };
 
-setInterval("countdown(seconds)", 1000);
 
 
+  
+  var diff = toSeconds(start);
+  diff_days     = find_time(diff, 86400);
+  diff_hours    = find_time(diff,3600) - (diff_days * 24);
+  diff_minutes  = find_time(diff, 60) - ((diff_hours * 60) + (diff_days * 1440));
+  diff_seconds  = find_time(diff, 1) - ((diff_minutes * 60) + (diff_hours * 3600) + (diff_days * 86400));
+  
+  console.log("days "+diff_days+ " | hours "+diff_hours+" | minutes "+diff_minutes+" | seconds "+diff_seconds);
+  
+  
+};
+
+setInterval(function(){
+ countdown();
+}, 1000);
