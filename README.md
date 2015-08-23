@@ -9,6 +9,7 @@ Small PHP app that displays a countdown timer to fridays 5:30 PST
 - [ ] Add help (?) icon for problems *ie tell people to refresh browser if timer stops*
 - [ ] Add settings portion to set time zone and other settings
 - [ ] Add animation to excite user when deadline approches
+- [X] rewrite in js
 - [X] favicon
 - [X] convert over to PHP-bp
 - [X] add analytics
