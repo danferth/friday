@@ -1,3 +1,8 @@
+<!--
+this was the PHP implimentation of this page. It used js to refresh the timer portion of 
+the page. this caused loading problems so it was redone in js.  held here for prosperity
+
+-->
 <?php
 
 class countdown_timer{
