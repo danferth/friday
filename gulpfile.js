@@ -94,7 +94,7 @@ gulp.task('copy', function(){
 });
 //=======watch================================================================================
 gulp.task('watch',function(){
-  gulp.watch('assets/css/**', ['css']);
+  gulp.watch('assets/scss/**', ['css']);
   gulp.watch(['assets/js/**'],['js']);
 });
 

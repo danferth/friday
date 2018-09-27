@@ -8,7 +8,7 @@
       <span class="digit minute"><span>Minutes</span></span>
       <span class="digit second"><span>Seconds</span></span>
     </div>
-      <p class="tag">Friday <strong>5:30</strong> will come, please be patient <i class="fa fa-smile-o"></i></p>
+      <p class="tag">5:30 Friday will come, please be patient <i class="fa fa-smile-o"></i></p>
   </div>
 </div>
 

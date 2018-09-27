@@ -8,14 +8,14 @@
 
 # THANKS
 
-    Sublime Text 3
-    Grunt
+    Cooper
 
 # TECHNOLOGY COLOPHON
 
     HTML
     CSS - from SCSS
     jQuery
-    PHP & boilerplate-php (https://github.com/danferth/bp-php)
-    Grunt
+    PHP
+    GULP
+    other stuff
 
