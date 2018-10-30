@@ -3,19 +3,13 @@
 
 # TEAM
 
-    Dan Klotz	|	Web Developer	|	@danferth
-    Coffee		|	Modivator		|	#caffeine
+    <name> -- <role> -- <twitter>
 
 # THANKS
 
-    Cooper
+    <name>
 
 # TECHNOLOGY COLOPHON
 
-    HTML
-    CSS - from SCSS
-    jQuery
-    PHP
-    GULP
-    other stuff
-
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css

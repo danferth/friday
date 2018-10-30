@@ -1,5 +1,13 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/theme/head.php'; ?>
+<?php
+  require('config.php');
+  //set title and description for page
+  $title        = 'home';
+  $description  = 'description for page';
+  $pageLoader   = false;
+  siteHeader();
+?>
 
+<!-- START -->
 <div class="taco">
   <div class="timer">
     <div class="countdown">
@@ -11,5 +19,6 @@
       <p class="tag">5:30 Friday will come, please be patient <i class="fa fa-smile-o"></i></p>
   </div>
 </div>
+<!-- END -->
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/theme/foot.php'; ?>
+<?php siteFooter(); ?>
